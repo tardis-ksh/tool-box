@@ -1,0 +1,30 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "declaration": false,
+    "esModuleInterop": true,
+    "moduleResolution": "nodenext",
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+
+    "alwaysStrict": false,
+    "declarationMap": false,
+    "downlevelIteration": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "lib": ["es6"],
+    "noEmitHelpers": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noImplicitUseStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "pretty": true,
+    "sourceMap": false,
+    "strict": true,
+    "noErrorTruncation": true
+  },
+  "exclude": ["node_modules", "dist", "**/dist/**", "packages/*/dist/**"]
+}
