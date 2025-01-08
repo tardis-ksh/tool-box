@@ -10,7 +10,6 @@ const config = {
 	outDir: 'dist',
 	entry: ['index.ts'],
 	target: 'esnext',
-	
 	esbuildOptions: (options) => {
 		options.alias = {
 			'@': path.resolve(process.cwd(), 'src'),

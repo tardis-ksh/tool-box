@@ -42,6 +42,18 @@ importers:
         specifier: ^5.7.2
         version: 5.7.2
 
+  clouds/tencent:
+    devDependencies:
+      '@tardis-ksh/eslint':
+        specifier: workspace:^
+        version: link:../../packages/eslint
+      '@tardis-ksh/tsconfig':
+        specifier: workspace:^
+        version: link:../../packages/tsconfig
+      '@tardis-ksh/tsup-config':
+        specifier: workspace:^
+        version: link:../../packages/tsup-config
+
   packages/eslint:
     devDependencies:
       '@eslint/js':

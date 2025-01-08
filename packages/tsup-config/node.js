@@ -1,4 +1,4 @@
-import config from './base';
+import config from './base.js';
 
 const nodeConfig = {
   platform: 'node',
