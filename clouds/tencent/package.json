@@ -1,0 +1,26 @@
+{
+  "name": "@tardis-ksh/tencent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsup",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint",
+    "format": "prettier --write"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "exports": {
+    "./cdn": {
+      "import": "./dist/cdn/index.js"
+    }
+  },
+  "devDependencies": {
+    "@tardis-ksh/eslint": "workspace:^",
+    "@tardis-ksh/tsconfig": "workspace:^",
+    "@tardis-ksh/tsup-config": "workspace:^"
+  }
+}
