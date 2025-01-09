@@ -1,8 +1,8 @@
 module.exports = {
   extends: ['@commitlint/config-conventional'],
-  ignore: [
+  ignores: [
     (commit) => commit?.includes('Version Packages'),
-    (commit) => commit.includes('release packages'),
+    (commit) => commit?.includes('release packages'),
   ],
   rules: {
     'type-enum': [
