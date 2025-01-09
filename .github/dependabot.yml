@@ -20,6 +20,7 @@ updates:
         update-types:
           - "minor"
           - "patch"
+          - "major"
     ignore:
 #      - dependency-name: "*"
 #        update-types: [ "version-update:semver-major" ]
