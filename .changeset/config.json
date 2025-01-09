@@ -1,6 +1,9 @@
 {
-  "$schema": "https://unpkg.com/@changesets/config@2.0.0/schema.json",
-  "changelog": "@changesets/cli/changelog",
+  "$schema": "https://unpkg.com/@changesets/config@3/schema.json",
+  "changelog": [
+    "@changesets/changelog-github",
+    { "repo": "tardis-ksh/tool-box" }
+  ],
   "baseBranch": "main",
   "commit": false,
   "fixed": [],
