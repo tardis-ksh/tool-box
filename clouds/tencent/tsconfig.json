@@ -1,5 +1,10 @@
 {
   "extends": "@tardis-ksh/tsconfig/node.json",
-  "include": ["*.ts", "*.d.ts"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["*.ts", "*.d.ts", "**/*.ts", "**/*.d.ts"],
+  "exclude": ["node_modules", "dist"],
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./*"]
+    }
+  }
 }

@@ -22,5 +22,8 @@
     "@tardis-ksh/eslint": "workspace:^",
     "@tardis-ksh/tsconfig": "workspace:^",
     "@tardis-ksh/tsup-config": "workspace:^"
+  },
+  "dependencies": {
+    "tencentcloud-sdk-nodejs-cdn": "^4.0.980"
   }
 }
