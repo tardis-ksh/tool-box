@@ -36,6 +36,7 @@ const flatConfigs = [
     rules: {
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/no-var-requires': 'warn',
+      '@typescript-eslint/ban-ts-comment': 'off',
     },
   },
 ];

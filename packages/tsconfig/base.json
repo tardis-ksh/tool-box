@@ -5,7 +5,7 @@
     "module": "esnext",
     "declaration": false,
     "esModuleInterop": true,
-    "moduleResolution": "nodenext",
+    "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
 
