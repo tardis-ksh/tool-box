@@ -1,4 +1,4 @@
-import { creatCdnClient } from '@/utils/cdn';
+import { creatCdnClient } from '@/utils/cdn.js';
 
 interface IPurgeCache {
   secretId: string;
