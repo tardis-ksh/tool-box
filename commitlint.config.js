@@ -16,6 +16,7 @@ module.exports = {
         'ci',
         'chore',
         'revert',
+        'test'
       ],
     ],
     // 'subject-case': [2, 'always', 'sentence-case'],

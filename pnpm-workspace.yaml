@@ -1,3 +1,6 @@
 packages:
   - "packages/*"
   - "clouds/*"
+
+catalog:
+  chalk: '^5.4.1'
