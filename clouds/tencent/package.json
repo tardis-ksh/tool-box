@@ -25,5 +25,11 @@
   "dependencies": {
     "chalk": "catalog:",
     "tencentcloud-sdk-nodejs-cdn": "^4.0.980"
+  },
+  "lint-staged": {
+    "*.{ts,json,md}": [
+      "eslint",
+      "prettier --write"
+    ]
   }
 }
