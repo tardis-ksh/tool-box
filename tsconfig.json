@@ -2,11 +2,12 @@
   "compileOnSave": false,
   "compilerOptions": {
     "target": "esnext",
-    "module": "esnext",
+    "module": "nodenext",
     "declaration": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
+    "moduleResolution": "nodenext",
 
     "alwaysStrict": false,
     "declarationMap": false,
@@ -23,7 +24,11 @@
     "pretty": true,
     "sourceMap": false,
     "strict": true,
-    "noErrorTruncation": true
+    "noErrorTruncation": true,
+
+    "noImplicitAny": true,
+    "noEmitOnError": true,
+    "removeComments": false
   },
   "exclude": ["node_modules", "dist", "**/dist/**", "packages/*/dist/**"]
 }

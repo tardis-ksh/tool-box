@@ -6,7 +6,7 @@ async function test() {
     const result = await purgePathCache({
       secretId: process.env.TENCENT_SECRET_ID!,
       secretKey: process.env.TENCENT_SECRET_KEY!,
-      paths: ['https://api.ksh7.com/'],
+      paths: ['https://test.ksh7.com/'],
       flushType: 'delete',
     });
 

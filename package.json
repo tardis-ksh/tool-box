@@ -10,7 +10,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo build && changeset publish"
+    "release": "turbo build && changeset publish",
+    "test": "vitest run --coverage"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.0",
@@ -18,13 +19,15 @@
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
     "@types/node": "^22.10.5",
+    "@vitest/coverage-v8": "^3.0.0-beta.4",
     "eslint": "^9.17.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.3.0",
     "prettier": "^3.4.2",
     "tsup": "^8.3.5",
     "turbo": "^2.3.3",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.0-beta.4"
   },
   "packageManager": "pnpm@9.15.3",
   "engines": {
