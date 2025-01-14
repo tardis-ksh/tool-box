@@ -16,8 +16,8 @@ const getMockParams = (): IPurgeCache => {
   return {
     flushType: 'flush',
     paths: ['https://test.ksh7.com'],
-    secretId: process.env.TENCENT_SECRET_ID || 'secretId',
-    secretKey: process.env.TENCENT_SECRET_KEY || 'secretKey',
+    secretId: process.env.TENCENT_CDN_CACHE_SECRET_ID || 'secretId',
+    secretKey: process.env.TENCENT_CDN_CACHE_SECRET_KEY || 'secretKey',
     // secretId: 'secretId',
     // secretKey: 'secretKey',
   };
