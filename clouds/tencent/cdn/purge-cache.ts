@@ -35,7 +35,7 @@ const purgePathCache = async (params: IPurgeCache) => {
 
   try {
     const data = await cdnClient.PurgePathCache(purgeConfig);
-    console.log(chalk.green('purge cache success'), data);
+    console.log(chalk.green('purge cache success'));
     return {
       data,
       success: true,
