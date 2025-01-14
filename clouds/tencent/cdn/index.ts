@@ -1,1 +1,1 @@
-export { default as purgePathCache } from './purge-cache.js';
+export { default as purgePathCache, type IPurgeCache } from './purge-cache.js';

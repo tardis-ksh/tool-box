@@ -2,9 +2,9 @@ import chalk from 'chalk';
 
 import { creatCdnClient } from '@/utils/cdn.js';
 
-interface IPurgeCache {
-  secretId: string;
-  secretKey: string;
+import type { Credentials } from '@/types/index.d.ts';
+
+export interface IPurgeCache extends Credentials {
   paths: string[];
   flushType: 'flush' | 'delete' | string;
   urlEncode?: boolean;

@@ -1,9 +1,8 @@
 import tencentCloud from 'tencentcloud-sdk-nodejs-cdn';
 
-interface CdnClientParams {
-  secretId: string;
-  secretKey: string;
-}
+import { Credentials } from '@/types/index.d.js';
+
+export type CdnClientParams = {} & Credentials;
 
 export const creatCdnClient = (params: CdnClientParams) => {
   const { secretId, secretKey } = params;
