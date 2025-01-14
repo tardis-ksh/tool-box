@@ -63,8 +63,8 @@ importers:
         specifier: 'catalog:'
         version: 5.4.1
       tencentcloud-sdk-nodejs-cdn:
-        specifier: ^4.0.980
-        version: 4.0.980
+        specifier: ^4.0.1012
+        version: 4.0.1012
     devDependencies:
       '@tardis-ksh/eslint':
         specifier: workspace:^
@@ -2109,8 +2109,8 @@ packages:
     resolution: {integrity: sha512-vrozgXDQwYO72vHjUb/HnFbQx1exDjoKzqx23aXEg2a9VIg2TSFZ8FmeZpTjUCFMYw7mpX4BE2SFu8wI7asYsw==}
     engines: {node: ^14.18.0 || >=16.0.0}
 
-  tencentcloud-sdk-nodejs-cdn@4.0.980:
-    resolution: {integrity: sha512-mbiKdaWs2KEFeAN3yBN5boTp2muPhy+fplzJYPtcFnSztdYuGAFaoUIufWGd8uC5i6dPmOpGI5Mzd2poZcHC+Q==}
+  tencentcloud-sdk-nodejs-cdn@4.0.1012:
+    resolution: {integrity: sha512-pwZ0iKr7lmI8IOo1IHxKtzcusHe38atKuWBKKJOCgTzunuDfMgLngQiMCccuWR7izEswAXUL6NRgnXsnMuzOug==}
     engines: {node: '>=10'}
 
   tencentcloud-sdk-nodejs-common@4.0.1008:
@@ -4354,7 +4354,7 @@ snapshots:
       '@pkgr/core': 0.1.1
       tslib: 2.6.2
 
-  tencentcloud-sdk-nodejs-cdn@4.0.980:
+  tencentcloud-sdk-nodejs-cdn@4.0.1012:
     dependencies:
       tencentcloud-sdk-nodejs-common: 4.0.1008
       tslib: 1.13.0
