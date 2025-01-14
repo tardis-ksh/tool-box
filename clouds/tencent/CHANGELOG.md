@@ -1,5 +1,11 @@
 # @tardis-ksh/tencent
 
+## 2.3.0
+
+### Minor Changes
+
+- [`0f3f740`](https://github.com/tardis-ksh/tool-box/commit/0f3f7401949041a80c2d09087ca72336e7408cce) Thanks [@Kshao123](https://github.com/Kshao123)! - change MD
+
 ## 2.2.0
 
 ### Minor Changes
