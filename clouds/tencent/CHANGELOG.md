@@ -1,5 +1,11 @@
 # @tardis-ksh/tencent
 
+## 2.2.0
+
+### Minor Changes
+
+- [`6f04ec5`](https://github.com/tardis-ksh/tool-box/commit/6f04ec554089bc8f5a122b62f5e38e0b9aff8c0c) Thanks [@Kshao123](https://github.com/Kshao123)! - add test file
+
 ## 2.1.0
 
 ### Minor Changes
