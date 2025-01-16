@@ -1,5 +1,13 @@
 # @tardis-ksh/tencent
 
+## 2.4.0
+
+### Minor Changes
+
+- [`f9a24c8`](https://github.com/tardis-ksh/tool-box/commit/f9a24c886b5fa5d17032350023514c3e3d91861b) Thanks [@Kshao123](https://github.com/Kshao123)! - add push urls cache & tests
+
+- [`ac2765f`](https://github.com/tardis-ksh/tool-box/commit/ac2765f487bb8e63acf2f6ade969d2bfc2e149ae) Thanks [@Kshao123](https://github.com/Kshao123)! - rm data log
+
 ## 2.3.0
 
 ### Minor Changes
