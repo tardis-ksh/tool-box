@@ -1,49 +1,25 @@
-import chalk from 'chalk';
+import { merge } from 'lodash-es';
+import { PurgePathCacheRequest } from 'tencentcloud-sdk-nodejs-cdn/src/services/cdn/v20180606/cdn_models.js';
 
-import { creatCdnClient } from '@/utils/cdn.js';
+import { handleCdnRequest } from '@/utils/cdn.js';
 
-import type { Credentials } from '@/types/index.d.ts';
+export type IPurgeCache = PurgePathCacheRequest;
 
-export interface IPurgeCache extends Credentials {
-  paths: string[];
-  flushType: 'flush' | 'delete' | string;
-  urlEncode?: boolean;
-  area?: 'mainland' | 'overseas';
-}
-
-const DefaultParams: Partial<IPurgeCache> = {
-  urlEncode: false,
-  flushType: 'delete',
+export const DefaultParams: Partial<IPurgeCache> = {
+  UrlEncode: false,
+  FlushType: 'delete',
 };
 
-const purgePathCache = async (params: IPurgeCache) => {
-  const { secretId, secretKey, paths, flushType, urlEncode, area } = {
-    ...DefaultParams,
-    ...params,
-  };
-
-  const cdnClient = creatCdnClient({ secretKey, secretId });
-
-  const purgeConfig = {
-    Paths: paths,
-    FlushType: flushType,
-    UrlEncode: urlEncode,
-    Area: area,
-  };
-
-  console.log(chalk.yellow('input purgeConfig'), purgeConfig);
-
-  try {
-    const data = await cdnClient.PurgePathCache(purgeConfig);
-    console.log(chalk.green('purge cache success'));
-    return {
-      data,
-      success: true,
-    };
-  } catch (error) {
-    console.error(chalk.red('purge cache error'), error);
-    process.exit(1);
-  }
+const purgePathCache = (
+  credentials: Tencent.Credentials,
+  originParams: IPurgeCache,
+) => {
+  const params = merge({}, DefaultParams, originParams);
+  return handleCdnRequest<'PurgePathCache'>(
+    'PurgePathCache',
+    credentials,
+    params,
+  );
 };
 
 export default purgePathCache;

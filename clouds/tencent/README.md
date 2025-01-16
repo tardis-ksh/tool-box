@@ -7,10 +7,6 @@
 ### Purge-Paths-Cache
 
 ```js
-const { purgePathCache } = require('@tardis-ksh/tencent/cdn');
-
-// or
-
 import { purgePathCache } from '@tardis-ksh/tencent/cdn';
 
 purgePathCache({

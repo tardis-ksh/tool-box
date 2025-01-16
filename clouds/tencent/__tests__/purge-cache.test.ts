@@ -11,15 +11,13 @@ import {
 import type { PurgePathCacheResponse } from 'tencentcloud-sdk-nodejs-cdn/src/services/cdn/v20180606/cdn_models.js';
 
 import { type IPurgeCache, purgePathCache } from '@/cdn/index.js';
+import { DefaultParams } from '@/cdn/purge-cache.js';
+import { MockCredentials } from '@/constants/test.js';
 
 const getMockParams = (): IPurgeCache => {
   return {
-    flushType: 'flush',
-    paths: ['https://test.ksh7.com'],
-    secretId: process.env.TENCENT_CDN_CACHE_SECRET_ID || 'secretId',
-    secretKey: process.env.TENCENT_CDN_CACHE_SECRET_KEY || 'secretKey',
-    // secretId: 'secretId',
-    // secretKey: 'secretKey',
+    FlushType: 'flush',
+    Paths: ['https://test.ksh7.com'],
   };
 };
 
@@ -60,7 +58,7 @@ describe('purge path cache', async () => {
       vi.clearAllMocks();
 
       // 模拟 process.exit
-      process.exit = vi.fn() as never;
+      process.exit = vi.fn() as any;
     });
 
     afterEach(() => {
@@ -84,27 +82,27 @@ describe('purge path cache', async () => {
       const params = getMockParams();
 
       const PurgePathCacheSpy = vi.spyOn(mockCdnClient, 'PurgePathCache');
-      const creatCdnClientSpy = vi.spyOn(
+      const handleCdnRequestSpy = vi.spyOn(
         await import('@/utils/cdn.js'),
-        'creatCdnClient',
+        'handleCdnRequest',
       );
 
       mockCdnClient.PurgePathCache.mockResolvedValueOnce(mockResponse);
-      const result = await purgePathCache(params);
+      const result = await purgePathCache(MockCredentials, params);
+      const clientParams = {
+        ...DefaultParams,
+        ...params,
+      };
 
       // 验证参数
-      expect(creatCdnClientSpy).toHaveBeenCalledWith({
-        secretId: params.secretId,
-        secretKey: params.secretKey,
-      });
+      expect(handleCdnRequestSpy).toHaveBeenCalledWith(
+        'PurgePathCache',
+        MockCredentials,
+        clientParams,
+      );
 
       // 验证对 CDN 的输入的参数
-      expect(PurgePathCacheSpy).toHaveBeenCalledWith({
-        Paths: params.paths,
-        FlushType: params.flushType,
-        UrlEncode: params.urlEncode || false,
-        Area: params.area,
-      });
+      expect(PurgePathCacheSpy).toHaveBeenCalledWith(clientParams);
 
       // 验证结果
       expect(result).toEqual({
@@ -119,7 +117,7 @@ describe('purge path cache', async () => {
       mockCdnClient.PurgePathCache.mockRejectedValueOnce(mockError);
 
       try {
-        await purgePathCache(params);
+        await purgePathCache(MockCredentials, params);
       } catch {
         /* empty */
       }
@@ -145,7 +143,7 @@ describe('purge path cache', async () => {
         const { purgePathCache: originPurePathCache } = await import(
           '@/cdn/index.js'
         );
-        const result = await originPurePathCache(params);
+        const result = await originPurePathCache(MockCredentials, params);
 
         expect.soft(result).toHaveProperty('success', true);
         expect.soft(result).toHaveProperty(['data', 'TaskId']);
