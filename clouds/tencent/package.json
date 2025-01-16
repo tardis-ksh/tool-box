@@ -26,11 +26,14 @@
   "devDependencies": {
     "@tardis-ksh/eslint": "workspace:^",
     "@tardis-ksh/tsconfig": "workspace:^",
-    "@tardis-ksh/tsup-config": "workspace:^"
+    "@tardis-ksh/tsup-config": "workspace:^",
+    "@types/lodash-es": "^4.17.12",
+    "esbuild": "^0.24.2"
   },
   "dependencies": {
     "chalk": "catalog:",
-    "tencentcloud-sdk-nodejs-cdn": "^4.0.1012"
+    "tencentcloud-sdk-nodejs-cdn": "^4.0.1012",
+    "lodash-es": "^4.17.21"
   },
   "lint-staged": {
     "*.{ts,json,md}": [
