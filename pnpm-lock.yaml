@@ -69,8 +69,8 @@ importers:
         specifier: ^4.17.21
         version: 4.17.21
       tencentcloud-sdk-nodejs-cdn:
-        specifier: ^4.0.1012
-        version: 4.0.1012
+        specifier: ^4.0.1013
+        version: 4.0.1013
     devDependencies:
       '@tardis-ksh/eslint':
         specifier: workspace:^
@@ -2090,12 +2090,12 @@ packages:
     resolution: {integrity: sha512-vrozgXDQwYO72vHjUb/HnFbQx1exDjoKzqx23aXEg2a9VIg2TSFZ8FmeZpTjUCFMYw7mpX4BE2SFu8wI7asYsw==}
     engines: {node: ^14.18.0 || >=16.0.0}
 
-  tencentcloud-sdk-nodejs-cdn@4.0.1012:
-    resolution: {integrity: sha512-pwZ0iKr7lmI8IOo1IHxKtzcusHe38atKuWBKKJOCgTzunuDfMgLngQiMCccuWR7izEswAXUL6NRgnXsnMuzOug==}
+  tencentcloud-sdk-nodejs-cdn@4.0.1013:
+    resolution: {integrity: sha512-PDH0yd6xOIHyhaSPTjdWDbLodnOCKJh6eH3Gz0QJV4tK3qUaYTphLDyv0IO1AS2JKMHjGKEUTYx4lYhwAgyr1w==}
     engines: {node: '>=10'}
 
-  tencentcloud-sdk-nodejs-common@4.0.1008:
-    resolution: {integrity: sha512-UMzendEKxP1e1LT3asrOAMcbVz4rKLMqm2s+Yl8Lu6HZtYkdjzkB92r8owTgCMkd0eYT3pWb4iCduoMNOy19WQ==}
+  tencentcloud-sdk-nodejs-common@4.0.1016:
+    resolution: {integrity: sha512-aILsKKzj/XhAm4W+AVkPUR/iGh4wylJ0CZia3ZOAtzM8H96U725CFVMufop+5Jr9MaFgCdYjN7IsjgK7zl76Xw==}
     engines: {node: '>=10'}
 
   term-size@2.2.1:
@@ -4309,15 +4309,15 @@ snapshots:
       '@pkgr/core': 0.1.1
       tslib: 2.8.1
 
-  tencentcloud-sdk-nodejs-cdn@4.0.1012:
+  tencentcloud-sdk-nodejs-cdn@4.0.1013:
     dependencies:
-      tencentcloud-sdk-nodejs-common: 4.0.1008
+      tencentcloud-sdk-nodejs-common: 4.0.1016
       tslib: 1.13.0
     transitivePeerDependencies:
       - encoding
       - supports-color
 
-  tencentcloud-sdk-nodejs-common@4.0.1008:
+  tencentcloud-sdk-nodejs-common@4.0.1016:
     dependencies:
       form-data: 3.0.2
       get-stream: 6.0.1
