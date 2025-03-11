@@ -1,5 +1,11 @@
 # @tardis-ksh/tencent
 
+## 2.5.0
+
+### Minor Changes
+
+- [`3eed948`](https://github.com/tardis-ksh/tool-box/commit/3eed948043a5553ad82c8de11fb979e341568610) Thanks [@Kshao123](https://github.com/Kshao123)! - add new purge history check
+
 ## 2.4.0
 
 ### Minor Changes
