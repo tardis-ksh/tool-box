@@ -28,7 +28,7 @@
     "@tardis-ksh/tsconfig": "workspace:^",
     "@tardis-ksh/tsup-config": "workspace:^",
     "@types/lodash-es": "^4.17.12",
-    "esbuild": "^0.25.1"
+    "esbuild": "^0.25.10"
   },
   "dependencies": {
     "chalk": "catalog:",
