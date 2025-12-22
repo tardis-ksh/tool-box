@@ -32,8 +32,8 @@
   },
   "dependencies": {
     "chalk": "catalog:",
-    "tencentcloud-sdk-nodejs-cdn": "^4.0.1029",
-    "lodash-es": "^4.17.21"
+    "tencentcloud-sdk-nodejs-cdn": "^4.1.147",
+    "lodash-es": "^4.17.22"
   },
   "lint-staged": {
     "*.{ts,json,md}": [
